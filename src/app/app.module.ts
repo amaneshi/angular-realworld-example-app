@@ -10,7 +10,8 @@ import {
   SharedModule
 } from './shared';
 import { AppRoutingModule } from './app-routing.module';
-import { CoreModule } from './core/core.module';
+import { CoreModule } from './core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [AppComponent, FooterComponent, HeaderComponent],
@@ -20,7 +21,8 @@ import { CoreModule } from './core/core.module';
     SharedModule,
     HomeModule,
     AuthModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
