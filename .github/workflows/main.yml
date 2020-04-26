@@ -42,3 +42,4 @@ jobs:
         source: "dist/*.*"
         target: ${{ secrets.TARGETPATH }}
         # strip_components: 3 # this is important
+        overwrite: true
