@@ -39,7 +39,7 @@ jobs:
         PASSWORD: ${{ secrets.PASSWORD }}
         PORT: ${{ secrets.PORT }}
       with:
-        source: "dist/*.*"
+        source: "dist/*"
         target: ${{ secrets.TARGETPATH }}
-        # strip_components: 3 # this is important
+        strip_components: 3 # this is important
         overwrite: true
