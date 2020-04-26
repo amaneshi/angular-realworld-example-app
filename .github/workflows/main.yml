@@ -30,12 +30,6 @@ jobs:
     - name: Build angular
       run: |
         ng build --prod
-        pwd
-        ls -l
-        cd dist
-        pwd
-        ls -l
-        cd -
  
     - name: copy file via ssh key
       uses: appleboy/scp-action@master
@@ -45,15 +39,6 @@ jobs:
         PASSWORD: ${{ secrets.PASSWORD }}
         PORT: ${{ secrets.PORT }}
       with:
-        source: "dist/*"
+        source: "dist/index.html"
         target: ${{ secrets.TARGETPATH }}
-        strip_components: 3 # this is important
-    
-    - name: check paths
-      run: |
-        pwd
-        ls -l
-        cd dist
-        pwd
-        ls -l
-        cd -
+        # strip_components: 3 # this is important
