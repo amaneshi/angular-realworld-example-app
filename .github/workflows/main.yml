@@ -44,3 +44,4 @@ jobs:
         target: ${{ secrets.TARGETPATH }}
         strip_components: 1 # this is important
         overwrite: true
+
