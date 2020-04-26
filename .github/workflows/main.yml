@@ -1,4 +1,4 @@
-name: Build & Deploy
+name: Build_&_Deploy
 
 on:
   push:
@@ -39,6 +39,6 @@ jobs:
         PASSWORD: ${{ secrets.PASSWORD }}
         PORT: ${{ secrets.PORT }}
       with:
-        source: "dist/index.html"
+        source: "dist/*.*"
         target: ${{ secrets.TARGETPATH }}
         # strip_components: 3 # this is important
